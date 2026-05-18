@@ -1,3 +1,4 @@
+import defaultImg from './assets/thumbnail-default.png';
 import styles from './ThumbnailItem.module.css';
 
 type ThumbnailSize = '40' | 'movie' | '64' | '160' | '182';
@@ -24,11 +25,7 @@ export function ThumbnailItem({ size = '40', src, alt = '' }: ThumbnailItemProps
       className={styles.thumbnail}
       style={{ width, height, borderRadius: radius }}
     >
-      {src ? (
-        <img src={src} alt={alt} className={styles.image} />
-      ) : (
-        <div className={styles.placeholder} />
-      )}
+      <img src={src ?? defaultImg} alt={alt} className={styles.image} />
     </div>
   );
 }
