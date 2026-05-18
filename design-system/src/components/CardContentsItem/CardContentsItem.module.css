@@ -174,16 +174,14 @@
   gap: 2px;
 }
 
-/* AI icon: 16×16 rounded square, #ECEDEF bg, radius 5.4 */
+/* AI icon wrapper: 16×16, flex centering */
 .aiIconWrap {
-  width: 16px;
-  height: 16px;
-  border-radius: 5px;
-  background: #ECEDEF;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: 16px;
+  height: 16px;
 }
 
 /* Gradient text: #7254C7(pos 0) → #3617CE(pos 1), 13px/Medium */

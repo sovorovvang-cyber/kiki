@@ -14,11 +14,20 @@ interface CardContentsItemProps {
   barcodeTime?: string;
 }
 
-// ── AI 타입 아이콘 (16×16 rounded square, #ECEDEF bg, sparkle icon) ─────────
+// ── AI 타입 아이콘 — Figma 실제 SVG 경로, gradient #3617CE → #9A85FF ─────────
 function AiSparkleIcon() {
   return (
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-      <path d="M6 1L6.8 4.2C7 5 7.5 5.6 8.2 5.9L11 6L8.2 6.1C7.5 6.4 7 7 6.8 7.8L6 11L5.2 7.8C5 7 4.5 6.4 3.8 6.1L1 6L3.8 5.9C4.5 5.6 5 5 5.2 4.2L6 1Z" fill="rgba(6,12,31,0.50)" />
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M11.9688 10.334C12.0824 10.0984 12.4175 10.0985 12.5312 10.334L12.874 11.0439C12.9969 11.2985 13.2024 11.5042 13.457 11.627L14.166 11.9688C14.4017 12.0824 14.4017 12.4176 14.166 12.5312L13.457 12.874C13.2023 12.9968 12.9968 13.2023 12.874 13.457L12.5312 14.166C12.4176 14.4017 12.0824 14.4017 11.9688 14.166L11.627 13.457C11.5042 13.2024 11.2985 12.9969 11.0439 12.874L10.334 12.5312C10.0985 12.4175 10.0984 12.0824 10.334 11.9688L11.0439 11.627C11.2985 11.5042 11.5042 11.2985 11.627 11.0439L11.9688 10.334ZM7.3125 2.79297C7.53986 2.32168 8.21123 2.32156 8.43848 2.79297L9.81348 5.64551C9.87488 5.7728 9.97719 5.87611 10.1045 5.9375L12.957 7.3125C13.4285 7.53978 13.4285 8.2112 12.957 8.43848L10.1045 9.81348C9.97739 9.87485 9.87485 9.97739 9.81348 10.1045L8.43848 12.957C8.2112 13.4285 7.53978 13.4285 7.3125 12.957L5.9375 10.1045C5.87611 9.97719 5.7728 9.87488 5.64551 9.81348L2.79297 8.43848C2.32156 8.21123 2.32168 7.53986 2.79297 7.3125L5.64551 5.9375C5.77289 5.87609 5.87609 5.77289 5.9375 5.64551L7.3125 2.79297Z"
+        fill="url(#aiGradient)"
+      />
+      <defs>
+        <linearGradient id="aiGradient" x1="2.44" y1="2.44" x2="14.34" y2="14.34" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#3617CE" />
+          <stop offset="1" stopColor="#9A85FF" />
+        </linearGradient>
+      </defs>
     </svg>
   );
 }
@@ -93,9 +102,9 @@ export function CardContentsItem({
   if (type === 'ai') {
     return (
       <div className={styles.aiRow}>
-        <div className={styles.aiIconWrap}>
+        <span className={styles.aiIconWrap}>
           <AiSparkleIcon />
-        </div>
+        </span>
         <span className={styles.aiText}>{aiText}</span>
       </div>
     );
