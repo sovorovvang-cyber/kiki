@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import defaultImg from '../ThumbnailItem/assets/thumbnail-default.png';
 import styles from './CarouselProductText.module.css';
 
 interface BadgeIconData {
@@ -13,12 +14,6 @@ interface CarouselProductTextProps {
   description?: string;
   logoSrc?: string;
   badges?: BadgeIconData[];
-}
-
-function DefaultLogo() {
-  return (
-    <div style={{ width: 40, height: 40, borderRadius: 8, background: '#E2E6F1' }} />
-  );
 }
 
 export function CarouselProductText({
@@ -37,11 +32,7 @@ export function CarouselProductText({
           {description && <span className={styles.description}>{description}</span>}
         </div>
         <div className={styles.logo}>
-          {logoSrc ? (
-            <img src={logoSrc} alt="" className={styles.logoImg} />
-          ) : (
-            <DefaultLogo />
-          )}
+          <img src={logoSrc ?? defaultImg} alt="" className={styles.logoImg} />
         </div>
       </div>
       {badges.length > 0 && (
