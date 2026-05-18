@@ -1,0 +1,33 @@
+/* Figma: 20×20 circle, pad 2, 3 types: 11pay gradient, kakaopay yellow, naverpay green */
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 11페이: gradient (red→orange) */
+.elevenPay {
+  background: linear-gradient(135deg, #FF3C00 0%, #FF8C00 100%);
+}
+
+/* 카카오페이: yellow */
+.kakaoPay {
+  background: #FFE000;
+}
+
+/* 네이버페이: green */
+.naverPay {
+  background: #03C75A;
+}
