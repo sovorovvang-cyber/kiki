@@ -11,7 +11,8 @@
     "tokens:build": "node style-dictionary.config.mjs",
     "tokens:watch": "node --watch style-dictionary.config.mjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy": "npx chromatic"
   },
   "dependencies": {
     "react": "^19.2.6",

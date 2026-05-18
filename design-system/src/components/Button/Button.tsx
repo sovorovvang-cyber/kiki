@@ -1,14 +1,15 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 import styles from './Button.module.css';
 
-/** Figma: .Button — Size=Small|Medium × Type=Primary|Secondary|Disabled */
-type Variant = 'primary' | 'secondary';
-type Size    = 'small' | 'medium' | 'large';
+/** Figma: .Button — Size=XSmall|Small|Medium|Large × Type=Primary|Secondary|Solid */
+type Variant = 'primary' | 'secondary' | 'solid';
+type Size    = 'xsmall' | 'small' | 'medium' | 'large';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
   size?: Size;
   fullWidth?: boolean;
+  rightIcon?: ReactNode;
   children: ReactNode;
 }
 
@@ -16,6 +17,7 @@ export function Button({
   variant = 'primary',
   size = 'medium',
   fullWidth = false,
+  rightIcon,
   children,
   className,
   ...rest
@@ -32,6 +34,7 @@ export function Button({
       {...rest}
     >
       {children}
+      {rightIcon && <span className={styles.rightIcon}>{rightIcon}</span>}
     </button>
   );
 }
