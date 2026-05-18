@@ -60,9 +60,7 @@ export const AllTypes: Story = {
         daysLeft="D-2"
         buttonLabel="버튼"
       />
-      <div style={{ height: 1, background: 'rgba(6,12,31,0.06)' }} />
       <CardContentsItem type="barcode" />
-      <div style={{ height: 1, background: 'rgba(6,12,31,0.06)' }} />
       <CardContentsItem type="ai" aiText="T 멤버십 사용 가능 포인트 65,300P" />
     </div>
   ),
