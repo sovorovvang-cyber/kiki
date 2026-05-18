@@ -45,12 +45,24 @@
   border-radius: 12px;
 }
 
-/* ── Size=Large (Figma 확장: h=48, padding 14/20, radius=12) ── */
+/* ── Size=Large (Figma: h=48, radius=16) ── */
 .large {
   height: 48px;
   padding: 14px 20px;
-  border-radius: 12px;
+  border-radius: 16px;
   font-size: 15px;
+}
+
+/* ── Size=XLarge (Figma: h=56, radius=20) — Primary only has shadow ── */
+.xlarge {
+  height: 56px;
+  padding: 16px 24px;
+  border-radius: 20px;
+  font-size: 17px;
+}
+
+.xlarge.primary {
+  box-shadow: 0px 8px 16px 0px rgba(27, 11, 102, 0.16);
 }
 
 /* ── Type=Primary (Figma: fill=blue-800, text=white) ── */

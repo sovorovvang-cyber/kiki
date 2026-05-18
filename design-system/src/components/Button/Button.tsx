@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 
 /** Figma: .Button — Size=XSmall|Small|Medium|Large × Type=Primary|Secondary|Solid */
 type Variant = 'primary' | 'secondary' | 'solid';
-type Size    = 'xsmall' | 'small' | 'medium' | 'large';
+type Size    = 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;

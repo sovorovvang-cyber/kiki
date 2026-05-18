@@ -8,7 +8,7 @@ const meta = {
   parameters: { layout: 'centered' },
   argTypes: {
     variant:   { control: 'select', options: ['primary', 'secondary', 'solid'] },
-    size:      { control: 'select', options: ['xsmall', 'small', 'medium', 'large'] },
+    size:      { control: 'select', options: ['xsmall', 'small', 'medium', 'large', 'xlarge'] },
     fullWidth: { control: 'boolean' },
     disabled:  { control: 'boolean' },
   },
@@ -62,13 +62,19 @@ export const XSmallSolidBoth: Story = {
   ),
 };
 
+export const XLargePrimary: Story = {
+  name: 'XLarge Primary (with shadow)',
+  args: { variant: 'primary', size: 'xlarge', children: '버튼' },
+};
+
 export const AllSizes: Story = {
   render: () => (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+    <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12, padding: 16 }}>
       <Button variant="solid" size="xsmall" rightIcon={<ArrowUpRightIcon />}>XSmall</Button>
       <Button size="small">Small</Button>
       <Button size="medium">Medium</Button>
       <Button size="large">Large</Button>
+      <Button size="xlarge">XLarge</Button>
     </div>
   ),
 };
