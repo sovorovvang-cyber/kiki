@@ -1,0 +1,28 @@
+{
+  "component": {
+    "input": {
+      "radius":  { "$value": "{radius.12}", "$type": "dimension" },
+      "height":  { "$value": "48px", "$type": "dimension" },
+      "padding": {
+        "horizontal": { "$value": "{spacing.16}", "$type": "dimension" },
+        "vertical":   { "$value": "{spacing.14}", "$type": "dimension" }
+      },
+      "gap": { "$value": "{spacing.8}", "$type": "dimension" },
+      "color": {
+        "bg": {
+          "default": { "$value": "{color.bg.layer.default}",      "$type": "color" },
+          "filled":  { "$value": "{color.fill.neutral.tertiary}", "$type": "color" }
+        },
+        "border": {
+          "default": { "$value": "{color.border.neutral.secondary}", "$type": "color" },
+          "focus":   { "$value": "{color.border.brand.primary}",     "$type": "color" },
+          "error":   { "$value": "{color.border.neutral.strong}",    "$type": "color" }
+        },
+        "text": {
+          "default":     { "$value": "{color.text.neutral.primary}",  "$type": "color" },
+          "placeholder": { "$value": "{color.text.neutral.tertiary}", "$type": "color" }
+        }
+      }
+    }
+  }
+}

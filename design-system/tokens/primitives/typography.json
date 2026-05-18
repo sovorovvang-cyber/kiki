@@ -1,0 +1,35 @@
+{
+  "typography": {
+    "fontFamily": {
+      "base": { "$value": "Pretendard Variable, -apple-system, sans-serif", "$type": "fontFamily" }
+    },
+    "fontSize": {
+      "100":  { "$value": "10px", "$type": "dimension" },
+      "200":  { "$value": "11px", "$type": "dimension" },
+      "300":  { "$value": "12px", "$type": "dimension" },
+      "400":  { "$value": "13px", "$type": "dimension" },
+      "500":  { "$value": "14px", "$type": "dimension" },
+      "600":  { "$value": "15px", "$type": "dimension" },
+      "700":  { "$value": "16px", "$type": "dimension" },
+      "800":  { "$value": "18px", "$type": "dimension" },
+      "900":  { "$value": "20px", "$type": "dimension" },
+      "1000": { "$value": "24px", "$type": "dimension" }
+    },
+    "fontWeight": {
+      "regular":  { "$value": "400", "$type": "fontWeight" },
+      "medium":   { "$value": "500", "$type": "fontWeight" },
+      "semibold": { "$value": "600", "$type": "fontWeight" },
+      "bold":     { "$value": "700", "$type": "fontWeight" }
+    },
+    "lineHeight": {
+      "100": { "$value": "120%", "$type": "number" },
+      "200": { "$value": "130%", "$type": "number" },
+      "300": { "$value": "140%", "$type": "number" },
+      "400": { "$value": "150%", "$type": "number" }
+    },
+    "letterSpacing": {
+      "normal": { "$value": "-0.04em", "$type": "number" },
+      "dense":  { "$value": "-0.05em", "$type": "number" }
+    }
+  }
+}

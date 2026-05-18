@@ -1,0 +1,60 @@
+/* Figma: Tab — h=47, border-bottom 1px #ebeef6 */
+.tab {
+  height: 47px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid #ebeef6;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tab::-webkit-scrollbar {
+  display: none;
+}
+
+/* TabItem: pad-top=12, pad-left=20, gap=30 between items */
+.tabItem {
+  flex-shrink: 0;
+  padding: 12px 20px 0;
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  letter-spacing: -0.04em;
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 15px;
+}
+
+.tabItem::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  border-radius: 2px 2px 0 0;
+  transition: width 0.15s;
+}
+
+/* Active: fontWeight=700, color=#3617ce, indicator full width */
+.active {
+  font-weight: 700;
+  color: #3617ce;
+}
+
+.active::after {
+  width: calc(100% - 40px);
+  background-color: #3617ce;
+}
+
+/* Inactive: fontWeight=500, color=#05001a */
+.inactive {
+  font-weight: 500;
+  color: #05001a;
+}
+
+.inactive::after {
+  width: 0;
+}

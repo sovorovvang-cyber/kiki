@@ -1,0 +1,16 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { LoginPage } from './LoginPage';
+
+const meta = {
+  title: 'Pages/LoginPage',
+  component: LoginPage,
+  parameters: {
+    layout: 'fullscreen',
+    viewport: { defaultViewport: 'mobile1' },
+  },
+} satisfies Meta<typeof LoginPage>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

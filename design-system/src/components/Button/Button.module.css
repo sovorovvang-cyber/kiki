@@ -1,0 +1,62 @@
+/* Figma: .Button component — Size=Small/Medium × Type=Primary/Secondary/Disabled */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+.button:active:not(:disabled) { opacity: 0.8; }
+.button:disabled { cursor: not-allowed; }
+
+/* ── Size=Small (Figma: h=28, padding 6/12, radius=full) ── */
+.small {
+  height: 28px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+}
+
+/* ── Size=Medium (Figma: h=36, padding 10/16, radius=12) ── */
+.medium {
+  height: 36px;
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+
+/* ── Size=Large (Figma 확장: h=48, padding 14/20, radius=12) ── */
+.large {
+  height: 48px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+/* ── Type=Primary (Figma: fill=blue-800, text=white) ── */
+.primary {
+  background-color: #3617ce; /* color/palette/blue-800 */
+  color: #ffffff;
+}
+
+/* ── Type=Secondary (Figma: fill=gray-200, text=gray-1000@80%) ── */
+.secondary {
+  background-color: #e2e6f1; /* color/palette/gray-200 */
+  color: rgba(6, 12, 31, 0.80); /* gray-1000 @ 80% */
+}
+
+/* ── Type=Disabled (Figma: fill=gray-1000@5%, text=gray-1000@20%) ── */
+.button:disabled,
+.disabled {
+  background-color: rgba(6, 12, 31, 0.05);
+  color: rgba(6, 12, 31, 0.20);
+  cursor: not-allowed;
+}
+
+/* ── Full width ── */
+.fullWidth { width: 100%; }

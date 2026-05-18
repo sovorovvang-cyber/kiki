@@ -1,0 +1,422 @@
+/* PaymentPage — SPACING_PATTERNS.md §3.5 폼/결제 화면 */
+
+/* ── 기본 레이아웃 ─────────────────────────────────────── */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  position: relative;
+}
+
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* 섹션: 좌우 20px, 상하 20px */
+.section {
+  padding: 20px;
+}
+
+/* 아코디언 섹션: 좌우 패딩 없음 (아코디언 자체가 24px 보유) */
+.sectionNoPad {
+  padding: 0;
+}
+
+/* 섹션 제목: 15px / 600 / near-black */
+.sectionTitle {
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(6, 12, 31, 1);
+  letter-spacing: -0.04em;
+  margin: 0 0 16px;
+}
+
+/* ── 주문 상품 카드 ────────────────────────────────────── */
+.productCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.productThumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(54, 23, 206, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.productThumbLabel {
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 22px;
+  font-weight: 700;
+  color: #3617ce;
+  letter-spacing: -0.05em;
+}
+
+.productInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.productBadge {
+  margin: 0;
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 11px;
+  font-weight: 600;
+  color: #3617ce;
+  letter-spacing: -0.04em;
+}
+
+.productName {
+  margin: 0;
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(6, 12, 31, 1);
+  letter-spacing: -0.04em;
+}
+
+.productDesc {
+  margin: 0;
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(6, 12, 31, 0.5);
+  letter-spacing: -0.04em;
+}
+
+.productPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.productOrigin {
+  margin: 0;
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(6, 12, 31, 0.4);
+  letter-spacing: -0.04em;
+  text-decoration: line-through;
+}
+
+.productSale {
+  margin: 0;
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(6, 12, 31, 1);
+  letter-spacing: -0.04em;
+}
+
+/* ── 결제 수단 ─────────────────────────────────────────── */
+.methodList {
+  display: flex;
+  flex-direction: column;
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.15s;
+}
+
+.radioItemChecked {
+  /* no background change — color is handled by individual elements */
+}
+
+.radioIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.radioText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.radioLabel {
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(6, 12, 31, 1);
+  letter-spacing: -0.04em;
+}
+
+.radioSub {
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(6, 12, 31, 0.5);
+  letter-spacing: -0.04em;
+}
+
+/* 라디오 원형 인디케이터 */
+.radioCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(6, 12, 31, 0.2);
+  background: transparent;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.radioCircleChecked {
+  border-color: #3617ce;
+  background: #3617ce;
+  box-shadow: inset 0 0 0 3px #ffffff;
+}
+
+/* ── 할인 혜택 ─────────────────────────────────────────── */
+.discountGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.applyBtn {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 9999px;
+  border: none;
+  background: #3617ce;
+  color: #ffffff;
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pointAvail {
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(6, 12, 31, 0.5);
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+/* ── 결제 금액 ─────────────────────────────────────────── */
+.priceList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.priceDivider {
+  margin: 4px 0;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.priceRow_default {}
+.priceRow_discount {}
+.priceRow_total {
+  margin-top: 4px;
+}
+
+.priceLabel {
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(6, 12, 31, 0.5);
+  letter-spacing: -0.04em;
+}
+
+.priceRow_total .priceLabel {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(6, 12, 31, 1);
+}
+
+.priceValue {
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(6, 12, 31, 1);
+  letter-spacing: -0.04em;
+}
+
+.priceValue_default {}
+
+.priceValue_discount {
+  color: #e42939;
+}
+
+.priceValue_total {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3617ce;
+}
+
+/* ── 아코디언 (AccordionPriceInfo) ────────────────────── */
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  gap: 16px;
+}
+
+.accordionTitle {
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(6, 12, 31, 0.7);
+  letter-spacing: -0.04em;
+}
+
+.accordionRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.accordionAmount {
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(6, 12, 31, 1);
+  letter-spacing: -0.04em;
+}
+
+.accordionBody {
+  padding: 0 20px 16px;
+}
+
+.accordionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── 약관 동의 ─────────────────────────────────────────── */
+.termsDivider {
+  margin: 12px 0;
+}
+
+.termsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(6, 12, 31, 0.2);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: transparent;
+  padding: 0;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+  box-sizing: border-box;
+}
+
+.checkCircleOn {
+  background: #3617ce;
+  border-color: #3617ce;
+  color: #ffffff;
+}
+
+.checkLabel {
+  flex: 1;
+  font-family: var(--skt-typography-font-family-base);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(6, 12, 31, 0.8);
+  letter-spacing: -0.04em;
+  min-width: 0;
+}
+
+.checkRequired {
+  font-weight: 600;
+  color: #3617ce;
+  margin-right: 4px;
+}
+
+.checkLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(6, 12, 31, 0.4);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+/* ── Sticky CTA (88px = padT 12 + btn 56 + padB 36 - 4px for border) */
+.cta {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #ebeef6;
+  padding: 12px 16px 36px;
+  height: 88px;
+  box-sizing: border-box;
+}
