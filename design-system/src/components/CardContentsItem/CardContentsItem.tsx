@@ -1,4 +1,4 @@
-import defaultThumb from './assets/thumbnail-default.png';
+import defaultThumb from '../ThumbnailItem/assets/thumbnail-default.png';
 import styles from './CardContentsItem.module.css';
 
 type CardType = 'list' | 'barcode' | 'ai';
