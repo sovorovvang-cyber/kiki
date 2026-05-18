@@ -1,3 +1,4 @@
+import defaultThumb from './assets/thumbnail-default.png';
 import styles from './CardContentsItem.module.css';
 
 type CardType = 'list' | 'barcode' | 'ai';
@@ -116,11 +117,7 @@ export function CardContentsItem({
       {/* Info: ThumbnailItem + Text */}
       <div className={styles.listInfo}>
         <div className={styles.listThumbnail}>
-          {imageSrc ? (
-            <img src={imageSrc} alt={title} className={styles.listImg} />
-          ) : (
-            <div className={styles.listImgPlaceholder} />
-          )}
+          <img src={imageSrc ?? defaultThumb} alt={title} className={styles.listImg} />
         </div>
         <div className={styles.listText}>
           <span className={styles.listTitle}>{title}</span>
