@@ -5,26 +5,20 @@ const meta = {
   title: 'Components/TitleMain',
   component: TitleMain,
   tags: ['autodocs'],
-  parameters: { layout: 'centered' },
+  parameters: { layout: 'padded' },
+  argTypes: { type: { control: 'select', options: ['Complete', 'Search'] } },
 } satisfies Meta<typeof TitleMain>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    subtitle: '서브 타이틀',
-    title: '메인 타이틀\n메인 타이틀',
-    indicatorCount: 6,
-    indicatorActiveIndex: 0,
-  },
+export const Complete: Story = {
+  args: { type: 'Complete' },
 };
 
-export const SecondSlide: Story = {
+export const Search: Story = {
   args: {
-    subtitle: '서브 타이틀',
-    title: '메인 타이틀\n메인 타이틀',
-    indicatorCount: 6,
-    indicatorActiveIndex: 2,
+    type: 'Search',
+    title: '득템 찬스 T우주\n클럽클리오 쿠폰팩',
   },
 };
