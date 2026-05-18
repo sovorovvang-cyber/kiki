@@ -1,3 +1,4 @@
+import defaultImg from '../ThumbnailItem/assets/thumbnail-default.png';
 import styles from './CarouselProduct.module.css';
 
 interface CarouselProductProps {
@@ -24,11 +25,7 @@ export function CarouselProduct({
   return (
     <div className={styles.card}>
       <div className={styles.thumbnail}>
-        {imageSrc ? (
-          <img src={imageSrc} alt={title} className={styles.img} />
-        ) : (
-          <div className={styles.imgPlaceholder} />
-        )}
+        <img src={imageSrc ?? defaultImg} alt={title} className={styles.img} />
       </div>
       <div className={styles.info}>
         <div className={styles.textInfo}>
