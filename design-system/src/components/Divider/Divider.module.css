@@ -12,8 +12,8 @@
   background-color: #ebeef6;
 }
 
-/* 섹션 구분선: 4px, gray-50 */
+/* 섹션 구분선: 4px, gray-100 */
 .section {
   height: 4px;
-  background-color: #f4f5fa;
+  background-color: #ebeef6;
 }
