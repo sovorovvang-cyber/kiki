@@ -43,9 +43,11 @@ export function CardInfo(props: CardInfoProps) {
 
     return (
       <div className={styles.brandWrap}>
-        <div className={styles.cardText}>
-          <p className={styles.subtitle}>{subtitle}</p>
-          <p className={styles.title}>{title}</p>
+        <div className={styles.brandCardText}>
+          <div className={styles.textGroup}>
+            <p className={styles.subtitle}>{subtitle}</p>
+            <p className={styles.title}>{title}</p>
+          </div>
           <div className={styles.badgeRow}>
             {badges.map((b) => (
               <span key={b.label} className={styles.badge}>{b.label}</span>
