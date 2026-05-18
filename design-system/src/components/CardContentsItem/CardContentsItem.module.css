@@ -1,23 +1,24 @@
-/* Figma: CardContentsItem — w:313, 3 types: List/Barcode/Ai */
-
-/* ── Type=List ── */
+/* ── Type=List — 313×58, horizontal gap 14 ────────────────────────────────── */
 .listRow {
   width: 313px;
+  height: 58px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 14px;
+  box-sizing: border-box;
 }
 
+/* Info frame: 254×58, horizontal, gap 14 */
 .listInfo {
   display: flex;
   align-items: center;
   gap: 14px;
-  flex: 1;
-  min-width: 0;
+  width: 254px;
+  height: 58px;
+  flex-shrink: 0;
 }
 
-/* ThumbnailItem 40×58, radius 10 */
+/* ThumbnailItem: 40×58, radius 10 */
 .listThumbnail {
   width: 40px;
   height: 58px;
@@ -37,57 +38,67 @@
 .listImgPlaceholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #E2E6F1 0%, #C8CEDD 100%);
+  background: linear-gradient(160deg, #dde1ec 0%, #c4c9d9 100%);
 }
 
+/* Text: 200×35, vertical, gap 0 — centered vertically in 58px container */
 .listText {
   display: flex;
   flex-direction: column;
   gap: 0;
-  flex: 1;
-  min-width: 0;
+  width: 200px;
+  flex-shrink: 0;
 }
 
+/* Title: 14px/SemiBold, #05001a */
 .listTitle {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: -0.04em;
-  line-height: 1.3;
+  line-height: 18px;
   color: #05001a;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+/* SubText frame: 200×17, horizontal, gap 4 */
 .listSubRow {
   display: flex;
   align-items: center;
   gap: 4px;
+  height: 17px;
 }
 
+/* SubText: 13px/Medium, rgba(6,12,31,0.40) */
 .listSub {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: -0.04em;
-  line-height: 1.3;
+  line-height: 17px;
   color: rgba(6, 12, 31, 0.40);
+  white-space: nowrap;
 }
 
-.dot {
+/* Separator dot: Ellipse 2×2, rgba(0,0,0,0.40) */
+.dotSep {
+  display: inline-block;
   width: 2px;
   height: 2px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.40);
   flex-shrink: 0;
+  align-self: center;
 }
 
-/* Button: pill, #E2E6F1, pad 6/12, 12px/SemiBold */
+/* Button: 45×28, pad 6/12, radius 9999, #E2E6F1, 12px/SemiBold rgba(6,12,31,0.80) */
 .listButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  height: 28px;
   padding: 6px 12px;
   background: #E2E6F1;
   border: none;
@@ -96,68 +107,95 @@
   font-size: 12px;
   font-weight: 600;
   letter-spacing: -0.04em;
+  line-height: 16px;
   color: rgba(6, 12, 31, 0.80);
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
-/* ── Type=Barcode ── */
-.barcode {
+.listButton:active {
+  opacity: 0.7;
+}
+
+/* ── Type=Barcode — 313×66 ────────────────────────────────────────────────── */
+.barcodeWrap {
   width: 313px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 4px;
 }
 
-.barLines {
-  display: flex;
-  align-items: stretch;
+.barcodeSvg {
+  display: block;
+  width: 313px;
   height: 48px;
-  gap: 1px;
 }
 
-.bar {
-  background: #05001a;
-  height: 100%;
+/* Number row: nums (left, gap 8, opacity 0.5) + time (right, #3617CE) */
+.barcodeNumRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 313px;
 }
 
-.barcodeText {
+.barcodeNums {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.5;
+}
+
+/* 11px/Medium, rgba(6,12,31,0.60) */
+.barcodeNum {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  color: rgba(6, 12, 31, 0.50);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 14px;
+  color: rgba(6, 12, 31, 0.60);
 }
 
-/* ── Type=Ai ── */
+/* 11px/Medium, #3617CE, right-aligned */
+.barcodeTime {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 14px;
+  color: #3617CE;
+}
+
+/* ── Type=ai — 17px tall, horizontal gap 2 ───────────────────────────────── */
 .aiRow {
   display: flex;
   align-items: center;
   gap: 2px;
 }
 
-.aiIcon {
+/* AI icon: 16×16 rounded square, #ECEDEF bg, radius 5.4 */
+.aiIconWrap {
   width: 16px;
   height: 16px;
   border-radius: 5px;
-  background: #EDEEF0;
+  background: #ECEDEF;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-/* Gradient text: #7254C7 → #3617CE */
+/* Gradient text: #7254C7(pos 0) → #3617CE(pos 1), 13px/Medium */
 .aiText {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: -0.04em;
-  line-height: 1.3;
-  background: linear-gradient(90deg, #7254C7 0%, #3617CE 100%);
+  line-height: 17px;
+  background: linear-gradient(90deg, #7254c7 0%, #3617ce 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  white-space: nowrap;
 }
