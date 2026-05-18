@@ -1,0 +1,57 @@
+/* Figma: SearchBar — node 1:6161 */
+.llmContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 353px;
+  height: 52px;
+  background: #F4F5FA;
+  border-radius: 9999px;
+  padding: 6px 6px 6px 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.llmPlaceholder {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.4;
+  color: rgba(6, 12, 31, 0.40);
+}
+
+.llmBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #3617CE;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(27, 11, 102, 0.24);
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 353px;
+  background: #F4F5FA;
+  border-radius: 9999px;
+  padding: 12px 16px 12px 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.searchPlaceholder {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.4;
+  color: rgba(6, 12, 31, 0.40);
+}
