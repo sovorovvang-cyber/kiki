@@ -66,3 +66,7 @@
   cursor: pointer;
   flex-shrink: 0;
 }
+
+.chevronBtn img {
+  transform: rotate(90deg);
+}
