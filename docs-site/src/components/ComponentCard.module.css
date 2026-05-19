@@ -1,0 +1,133 @@
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.15s;
+  box-shadow: 0 1px 4px rgba(6,12,31,0.06);
+  border: 1.5px solid transparent;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(6,12,31,0.10);
+  transform: translateY(-2px);
+}
+
+.cardActive {
+  border-color: #3617ce;
+  box-shadow: 0 0 0 3px rgba(54,23,206,0.12);
+}
+
+.preview {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #f4f5fa;
+}
+
+.preview iframe {
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: top left;
+  border: none;
+  pointer-events: none;
+}
+
+.previewLoading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f5fa;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #e2e6f1;
+  border-top-color: #3617ce;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.info {
+  padding: 14px 16px 16px;
+  border-top: 1px solid #f4f5fa;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #05001a;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.desc {
+  font-size: 12px;
+  color: rgba(6,12,31,0.5);
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  transition: background 0.1s;
+  text-decoration: none;
+}
+
+.btnFigma {
+  background: #f4f5fa;
+  color: rgba(6,12,31,0.7);
+}
+.btnFigma:hover { background: #e2e6f1; }
+
+.btnStorybook {
+  background: #fff0f0;
+  color: #e53935;
+}
+.btnStorybook:hover { background: #fde8e8; }

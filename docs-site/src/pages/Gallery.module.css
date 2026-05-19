@@ -1,0 +1,39 @@
+.wrap {
+  padding: 32px 40px;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #05001a;
+  letter-spacing: -0.05em;
+}
+
+.count {
+  font-size: 14px;
+  color: rgba(6,12,31,0.4);
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  padding: 80px 0;
+  text-align: center;
+  color: rgba(6,12,31,0.3);
+  font-size: 14px;
+}

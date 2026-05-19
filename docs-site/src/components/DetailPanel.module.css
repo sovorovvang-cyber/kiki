@@ -1,0 +1,159 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6,12,31,0.4);
+  z-index: 100;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.panel {
+  width: 560px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.2s ease;
+  overflow: hidden;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(40px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+.header {
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid #f4f5fa;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.headerInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.headerName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #05001a;
+  letter-spacing: -0.05em;
+}
+
+.headerBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-top: 4px;
+}
+
+.headerDesc {
+  font-size: 13px;
+  color: rgba(6,12,31,0.5);
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+}
+
+.closeBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #f4f5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: rgba(6,12,31,0.5);
+  transition: background 0.1s;
+}
+.closeBtn:hover { background: #e2e6f1; }
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview {
+  height: 360px;
+  background: #f4f5fa;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.links {
+  padding: 20px 28px;
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #f4f5fa;
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  transition: background 0.1s, transform 0.1s;
+  text-decoration: none;
+}
+
+.linkBtn:hover { transform: translateY(-1px); }
+
+.linkBtnFigma {
+  background: #f4f5fa;
+  color: #05001a;
+}
+.linkBtnFigma:hover { background: #e2e6f1; }
+
+.linkBtnStorybook {
+  background: #fff0f0;
+  color: #e53935;
+}
+.linkBtnStorybook:hover { background: #fde8e8; }
+
+.meta {
+  padding: 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.metaLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(6,12,31,0.4);
+  width: 100px;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+}
+
+.metaValue {
+  font-size: 12px;
+  color: rgba(6,12,31,0.7);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f4f5fa;
+  padding: 2px 8px;
+  border-radius: 4px;
+}

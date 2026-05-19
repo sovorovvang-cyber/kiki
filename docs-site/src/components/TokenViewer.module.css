@@ -1,0 +1,164 @@
+.wrap {
+  padding: 32px 40px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #05001a;
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(6,12,31,0.5);
+  margin-top: 6px;
+  letter-spacing: -0.02em;
+}
+
+.syncInfo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 6px 12px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #16a34a;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(6,12,31,0.4);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f4f5fa;
+}
+
+/* Color grid */
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.colorCard {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(6,12,31,0.08);
+}
+
+.colorSwatch {
+  height: 64px;
+}
+
+.colorInfo {
+  padding: 8px 10px;
+  background: #ffffff;
+}
+
+.colorName {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(6,12,31,0.6);
+  letter-spacing: -0.01em;
+  word-break: break-all;
+}
+
+.colorValue {
+  font-size: 11px;
+  color: rgba(6,12,31,0.4);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  margin-top: 2px;
+}
+
+/* Spacing grid */
+.spacingList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spacingRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(6,12,31,0.05);
+}
+
+.spacingName {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(6,12,31,0.5);
+  width: 120px;
+  flex-shrink: 0;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.spacingBar {
+  background: #3617ce;
+  height: 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.spacingValue {
+  font-size: 12px;
+  color: rgba(6,12,31,0.7);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  margin-left: auto;
+}
+
+/* Radius grid */
+.radiusGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.radiusCard {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(6,12,31,0.05);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 100px;
+}
+
+.radiusBox {
+  width: 48px;
+  height: 48px;
+  background: #3617ce22;
+  border: 2px solid #3617ce;
+}
+
+.radiusName {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(6,12,31,0.5);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
