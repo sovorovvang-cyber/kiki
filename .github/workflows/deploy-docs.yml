@@ -25,10 +25,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: docs-site/package-lock.json
 
-      - name: Install dependencies
+      - name: Install design-system dependencies
+        working-directory: design-system
+        run: npm install
+
+      - name: Install docs-site dependencies
         working-directory: docs-site
         run: npm install
 

@@ -17,6 +17,5 @@
       "@ds/*": ["../design-system/src/*"]
     }
   },
-  "include": ["src", "../design-system/src"],
-  "exclude": ["../design-system/src/**/*.stories.tsx", "../design-system/src/**/*.stories.ts"]
+  "include": ["src"]
 }
