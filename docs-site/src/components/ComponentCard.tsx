@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import type { ComponentMeta } from '../data/registry';
 import { CATEGORY_COLORS, getFigmaUrl, getStorybookUrl } from '../data/registry';
+import { PREVIEWS } from '../previews/index';
 import styles from './ComponentCard.module.css';
 
 const STORYBOOK_BASE = 'https://6a0b16735119d1a7865b7171-kujhkqysbi.chromatic.com';
@@ -12,11 +12,11 @@ interface Props {
 }
 
 export function ComponentCard({ component, active, onClick }: Props) {
-  const [loaded, setLoaded] = useState(false);
   const catColor = CATEGORY_COLORS[component.category];
-  const iframeUrl = getStorybookUrl(STORYBOOK_BASE, component.storybookId);
   const figmaUrl = component.figmaNodeId ? getFigmaUrl(component.figmaNodeId) : null;
   const storybookUrl = `${STORYBOOK_BASE}/?path=/story/${component.storybookId}`;
+
+  const PreviewComponent = PREVIEWS[component.name];
 
   return (
     <div
@@ -24,17 +24,11 @@ export function ComponentCard({ component, active, onClick }: Props) {
       onClick={onClick}
     >
       <div className={styles.preview}>
-        {!loaded && (
-          <div className={styles.previewLoading}>
-            <div className={styles.spinner} />
-          </div>
+        {PreviewComponent ? (
+          <PreviewComponent />
+        ) : (
+          <div className={styles.previewFallback}>{component.name}</div>
         )}
-        <iframe
-          src={iframeUrl}
-          title={component.name}
-          onLoad={() => setLoaded(true)}
-          style={{ opacity: loaded ? 1 : 0 }}
-        />
       </div>
 
       <div className={styles.info}>
