@@ -28,12 +28,16 @@ export function FilterSorting({
         <div className={styles.btnGroup}>
           <button className={styles.sortBtn} onClick={onSortClick}>
             <span className={styles.btnLabel}>{sortLabel}</span>
-            <img src={sortArrow} alt="" width={16} height={16} />
+            <span className={styles.iconWrap}>
+              <img src={sortArrow} alt="" className={styles.sortArrow} />
+            </span>
           </button>
           <div className={styles.divider} />
           <button className={styles.filterBtn} onClick={onFilterClick}>
             <span className={styles.btnLabel}>필터</span>
-            <img src={filterIcon} alt="" width={16} height={16} />
+            <span className={styles.iconWrap}>
+              <img src={filterIcon} alt="" className={styles.filterIconImg} />
+            </span>
           </button>
         </div>
       </div>
