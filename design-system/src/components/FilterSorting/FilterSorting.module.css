@@ -71,3 +71,26 @@
   background: #ebeef6;
   flex-shrink: 0;
 }
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sortArrow {
+  width: 8px;
+  height: auto;
+  transform: rotate(180deg);
+  flex-shrink: 0;
+}
+
+.filterIconImg {
+  width: 12px;
+  height: auto;
+  flex-shrink: 0;
+}
