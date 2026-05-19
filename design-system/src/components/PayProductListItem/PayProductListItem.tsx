@@ -1,7 +1,6 @@
 import styles from './PayProductListItem.module.css';
+import { ButtonCloseItem } from '../ButtonCloseItem/ButtonCloseItem';
 import thumbnailLogo from './assets/thumbnail-logo.png';
-import closeBg from './assets/close-bg.svg';
-import closeX from './assets/close-x.svg';
 
 /* Figma: PayProductListItem — node 10312:50173
    type=Pay  : 결제 상품 (옵션 박스 + 변경 링크)
@@ -97,10 +96,7 @@ export function PayProductListItem({
           )}
         </div>
         {isCart && (
-          <button className={styles.closeBtn} onClick={onClose} aria-label="삭제">
-            <img src={closeBg} alt="" className={styles.closeBg} />
-            <img src={closeX} alt="" className={styles.closeX} />
-          </button>
+          <ButtonCloseItem onClick={onClose} aria-label="삭제" />
         )}
       </div>
 

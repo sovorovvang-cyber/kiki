@@ -83,14 +83,14 @@
 }
 
 .sortArrow {
-  width: 8px;
-  height: auto;
+  width: 16px;
+  height: 16px;
   transform: rotate(180deg);
   flex-shrink: 0;
 }
 
 .filterIconImg {
-  width: 12px;
-  height: auto;
+  width: 16px;
+  height: 16px;
   flex-shrink: 0;
 }

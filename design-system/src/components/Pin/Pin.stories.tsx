@@ -30,19 +30,6 @@ export const Numbers: Story = {
   ),
 };
 
-// ── 색상 변형 ─────────────────────────────────────────────────────────────────
-export const Colors: Story = {
-  name: 'Color Variants',
-  render: () => (
-    <div style={{ display: 'flex', alignItems: 'flex-end', gap: 8 }}>
-      <Pin number={1} color="#3617ce" />
-      <Pin number={2} color="#05001a" />
-      <Pin number={3} color="#e53935" />
-      <Pin number={4} color="#00897b" />
-    </div>
-  ),
-};
-
 // ── 리스트 컨텍스트 예시 ─────────────────────────────────────────────────────
 export const InList: Story = {
   name: 'In List Context',

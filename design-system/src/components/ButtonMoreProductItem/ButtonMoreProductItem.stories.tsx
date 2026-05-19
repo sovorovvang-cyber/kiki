@@ -45,10 +45,10 @@ export const InList: Story = {
         display: 'flex', flexDirection: 'column', gap: 8,
         padding: 16, background: '#ffffff', borderRadius: 16,
       }}>
-        {['이달의 Best 기프티콘', '새로 나온 인기 상품'].map((label) => (
+        {['이달의 Best 기프티콘', '새로 나온 인기 상품'].map((label, i, arr) => (
           <div key={label} style={{
             padding: '12px 0',
-            borderBottom: '1px solid rgba(6,12,31,0.06)',
+            borderBottom: i < arr.length - 1 ? '1px solid rgba(6,12,31,0.06)' : undefined,
             fontSize: 14, color: '#05001a',
           }}>
             {label}
