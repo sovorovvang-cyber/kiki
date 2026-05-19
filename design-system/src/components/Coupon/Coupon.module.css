@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   width: 369px;
+  height: 115px;
   padding: 24px;
   background: #f4f5fa;
   border-radius: 20px;
@@ -13,6 +14,7 @@
 .left {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
   flex-shrink: 0;
 }
@@ -44,6 +46,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  flex-shrink: 0;
 }
 
 .subtitle {
@@ -69,6 +72,7 @@
 .badgeRow {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3px;
 }
 
@@ -104,6 +108,7 @@
   background: #e2e6f1;
   border: none;
   border-radius: 9999px;
+  overflow: hidden;
   cursor: pointer;
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-size: 12px;
